@@ -3,7 +3,7 @@
 	"displayName": "ASDsnipper",
 	"description": "Support des fichier .algo pour le module * Algorithmique Structures de données *",
 	"version": "0.0.1",
-	"icon": "images/algorithm.png",
+	"icon": "images/logo.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/dr-dahou-adrar/asdsnipper"

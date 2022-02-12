@@ -1,0 +1,123 @@
+{
+    "Template de [pour]": {
+        "scope": "algo",
+        "prefix": "pour",
+        "body": [
+            "pour ${1:variable} de ${2:nombre} a ${3:nombre} faire",
+            "    $4",
+            "fpour"
+        ]
+    },
+    "Template de [pour/decroissant]": {
+        "scope": "algo",
+        "prefix": "pour decroissant",
+        "body": [
+            "pour ${1:variable} decroissant de ${2:nombre} a ${3:nombre} faire",
+            "    $4",
+            "fpour"
+        ]
+    },
+    "Template de [pour chaque]": {
+        "scope": "algo",
+        "prefix": "pour chaque",
+        "body": [
+            "pour chaque ${1:variable} dans ${2:ensemble} faire",
+            "    $3",
+            "fpour"
+        ]
+    },
+    "Template de [pour chaque/jusque]": {
+        "scope": "algo",
+        "prefix": "pour chaque jusque",
+        "body": [
+            "pour chaque ${1:variable} jusque ${2:condition} dans ${3:ensemble} faire",
+            "    $4",
+            "fpour"
+        ]
+    },
+    "Template de [tant que]": {
+        "scope": "algo",
+        "prefix": "tant que",
+        "body": [
+            "tant que ${1:condition} faire",
+            "    $2",
+            "ftant"
+        ]
+    },
+    "Template de [si]": {
+        "scope": "algo",
+        "prefix": "si",
+        "body": [
+            "si ${1:condition} alors",
+            "    $2",
+            "fsi"
+        ]
+    },
+    "Template de [si/sinon]": {
+        "scope": "algo",
+        "prefix": "si sinon",
+        "body": [
+            "si ${1:condition} alors",
+            "    $2",
+            "sinon",
+            "    $3",
+            "fsi"
+        ]
+    },
+    "Template de [sinon]": {
+        "scope": "algo",
+        "prefix": "sinon",
+        "body": [
+            "sinon",
+            "    $1"
+        ]
+    },
+    "Template de [fonction]": {
+        "scope": "algo",
+        "prefix": "fonction",
+        "body": [
+            "fonction ${1:nom}( ${2:arguments} )",
+            "debut",
+            "    $3",
+            "fin"
+        ]
+    },
+    "Template de [algorithme]": {
+        "scope": "algo",
+        "prefix": "algorithme",
+        "body": [
+            "algorithme",
+            "debut",
+            "    $1",
+            "fin"
+        ]
+    },
+    "Template de [retourne]": {
+        "scope": "algo",
+        "prefix": "retourne",
+        "body": [
+            "retourne ${1:valeur}"
+        ]
+    },
+    "Template de [fleche gauche]": {
+        "scope": "algo",
+        "prefix": "<=",
+        "body": [
+            "◄-"
+        ]
+    },
+    "Template de [fleche droite]": {
+        "scope": "algo",
+        "prefix": "=>",
+        "body": [
+            "-►"
+        ]
+    },
+    "Template de [different]": {
+        "scope": "algo",
+        "prefix": "=/=",
+        "body": [
+            "≠"
+        ]
+    }
+}

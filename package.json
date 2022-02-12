@@ -1,0 +1,128 @@
+{
+	"name": "asdsnipper",
+	"displayName": "ASDsnipper",
+	"description": "Support des fichier .algo pour l'IUT",
+	"version": "0.0.9",
+	"icon": "images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FurWaz/AlgoSnipper.git"
+	},
+	"publisher": "dahou",
+	"engines": {
+		"vscode": "^1.58.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:Algo",
+		"onCommand:algosnipper.launchDoom"
+	],
+	"main": "./client/out/extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Main configuration",
+			"properties": {
+				"languageServerAlgo.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				},
+				"languageServerAlgo.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "algosnipper.genLexique",
+				"title": "Generer le lexique"
+			},
+			{
+				"command": "algosnipper.launch",
+				"title": "Executer l'algorithme"
+			},
+			{
+				"command": "algosnipper.insertArrow",
+				"title": "Inserer une fleche"
+			},
+			{
+				"command": "algosnipper.launchDoom",
+				"title": "Lancer DOOM"
+			}
+		],
+		"snippets": [
+			{
+				"language": "Algo",
+				"path": "./snippets/snippets.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "Algo",
+				"extensions": [
+					".algo"
+				],
+				"configuration": "./language/brackets.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "Algo",
+				"scopeName": "source.algo",
+				"path": "./language/colorization.json",
+				"embeddedLanguages": {
+					"meta.embedded.block.javascript": "javascript"
+				}
+			}
+		],
+		"keybindings": [
+			{
+				"command": "algosnipper.insertArrow",
+				"key": "ctrl+enter",
+				"mac": "cmd+enter"
+			},
+			{
+				"command": "algosnipper.launch",
+				"key": "ctrl+alt+l",
+				"mac": "cmd+alt+l"
+			},
+			{
+				"command": "algosnipper.genLexique",
+				"key": "ctrl+alt+g",
+				"mac": "cmd+alt+g"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+	},
+	"devDependencies": {
+		"@types/vscode": "1.58.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"eslint": "^7.27.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	}
+}

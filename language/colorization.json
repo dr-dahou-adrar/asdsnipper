@@ -1,0 +1,69 @@
+
+{
+    "scopeName": "source.algo",
+    "patterns": [{ "include": "#expression" }],
+    "repository": {
+        "expression": {
+            "patterns": [
+                { "include": "#single-comment" }, { "include": "#double-comment" },
+                { "include": "#keywords" }, { "include": "#numbers" }, 
+                { "include": "#types" }, { "include": "#constant" },
+                { "include": "#single-quote" }, { "include": "#double-quote" },
+                { "include": "#function" }, { "include": "#arrow" },
+                { "include": "#furry" }, { "include": "#blank" }
+            ]
+        },
+        "keywords": {
+            "match": "(fonction|algorithme|tant que|fpour|pour|ftant|sinon|alors|si|fsi|debut|fin|a|faire|de|retourne||InOut|chaque|dans|decroissant|jusque)[\\s]",
+            "name": "keyword.letter"
+        },
+        "numbers": {
+            "match": "[0-9]+\\.[0-9]|[0-9]+|vrai|faux",
+            "name": "constant.numeric.decimal"
+        },
+        "types": {
+            "match": "entier|chaine|caractere|booleen|reel|tableau|[A-Z]+[a-z0-9]+[a-zA-Z0-9_]*",
+            "name": "entity.name.type.instance"
+        },
+        "arrow": {
+            "match": "←|◄-|<-|<=|=|<|>|>=|->|=>|-►|→|/|≠|et |ou |mod |non |\\+|-|/|%|\\*",
+            "name": "support.function"
+        },
+        "double-quote": {
+            "begin": "\"",
+            "end": "\"",
+            "name": "string.quoted.single"
+        },
+        "single-quote": {
+            "begin": "'",
+            "end": "'",
+            "name": "string.quoted.single"
+        },
+        "single-comment": {
+            "begin": "//",
+            "end": "\\n",
+            "name": "comment.line.double-slash"
+        },
+        "double-comment": {
+            "begin": "/\\*",
+            "end": "\\*/",
+            "name": "comment.block"
+        },
+        "constant": {
+            "match": "[A-Z]+[A-Z_]*",
+            "name": "variable.other.contants"
+        },
+        "function": {
+            "match": "[a-zA-Z_]+\\(|\\(|\\)",
+            "name": "entity.name.function"
+        },
+        "furry": {
+            "match": "furry|furries|uwu|owo|awoo|roar",
+            "name": "storage.type.function"
+        },
+        "blank": {
+            "match": "[a-zA-Z_]+[0-9]*[^\\(]",
+            "name": "meta.brace.square"
+        }
+    }
+}

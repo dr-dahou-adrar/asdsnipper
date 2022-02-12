@@ -22,7 +22,7 @@
 ![lexicon demo](/demo/lexicon.gif)
 
 ## Autocompletion des variables / attributs
-![autocomplete demo](https://raw.githubusercontent.com/FurWaz/AlgoSnipper/master/demo/autocomplete.gif)
+![autocomplete demo](/demo/autocomplete.gif)
 
 ## Informations au survol des variables / attributs
-![hover demo](https://raw.githubusercontent.com/FurWaz/AlgoSnipper/master/demo/hover.gif)
+![hover demo](/demo/hover.gif)

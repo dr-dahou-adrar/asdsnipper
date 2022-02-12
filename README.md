@@ -1,5 +1,5 @@
 # AlgoSnipper
-*Extension VS Code pour l'ajout du language algorithmique pour le module: Algorithmique Structures de données *
+*Extension VS Code pour l'ajout du language algorithmique pour le module: Algorithmique Structures de données*
 
 ---
 ### Cette extension ajoute:

@@ -1,12 +1,12 @@
 {
 	"name": "asdsnipper",
 	"displayName": "ASDsnipper",
-	"description": "Support des fichier .algo pour l'IUT",
-	"version": "0.0.9",
-	"icon": "images/logo.png",
+	"description": "Support des fichier .algo pour le module * Algorithmique Structures de données *",
+	"version": "0.0.1",
+	"icon": "images/algorithm.png",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/FurWaz/AlgoSnipper.git"
+		"url": "https://github.com/dr-dahou-adrar/asdsnipper"
 	},
 	"publisher": "asdsnipper",
 	"engines": {

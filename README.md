@@ -16,10 +16,10 @@
 
 ---
 ## Raccourcis pour programmer
-![snippet demo](https://raw.githubusercontent.com/FurWaz/AlgoSnipper/master/demo/snippets.gif)
+![snippet demo](/demo/snippets.gif)
 
 ## Generation automatique du lexique
-![lexicon demo](https://raw.githubusercontent.com/FurWaz/AlgoSnipper/master/demo/lexicon.gif)
+![lexicon demo](/demo/lexicon.gif)
 
 ## Autocompletion des variables / attributs
 ![autocomplete demo](https://raw.githubusercontent.com/FurWaz/AlgoSnipper/master/demo/autocomplete.gif)

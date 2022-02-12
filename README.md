@@ -12,7 +12,7 @@
 ### Raccourcis disponibles:
 - [CTRL+ALT+G]: Génère le lexique automatiquement
 - [CTRL+ALT+L]: Execute l'algorithme courant et affiche la sortie dans la console (en developpement)
-- [CTRL+ENTER]: Créé une flèche vers la gauche
+- [CTRL+ALT+ENTER]: Créé une flèche vers la gauche
 
 ---
 ## Raccourcis pour programmer

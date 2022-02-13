@@ -1,4 +1,3 @@
-
 {
     "scopeName": "source.algo",
     "patterns": [{ "include": "#expression" }],
@@ -14,7 +13,7 @@
             ]
         },
         "keywords": {
-            "match": "(fonction|algorithme|tant que|fpour|pour|ftant|sinon|alors|si|fsi|debut|fin|a|faire|de|retourne||InOut|chaque|dans|decroissant|jusque)[\\s]",
+            "match": "Repéter[^a-zA-Z0-9]|Variables[^a-zA-Z0-9]|Jusqu'a[^a-zA-Z0-9]|Constantes[^a-zA-Z0-9]|Lire[^a-zA-Z0-9]|Ecrire[^a-zA-Z0-9]|fonction[^a-zA-Z0-9]|Algorithme[^a-zA-Z0-9]|Tant que[^a-zA-Z0-9]|FinPour[^a-zA-Z0-9]|Pour[^a-zA-Z0-9]|FinTantque[^a-zA-Z0-9]|Sinon[^a-zA-Z0-9]|Alors[^a-zA-Z0-9]|Si[^a-zA-Z0-9]|FinSi[^a-zA-Z0-9]|Début[^a-zA-Z0-9]|Fin.[^a-zA-Z0-9]|A[^a-zA-Z0-9]|Faire[^a-zA-Z0-9]|De[^a-zA-Z0-9]|retourne[^a-zA-Z0-9]|et[^a-zA-Z0-9]|non[^a-zA-Z0-9]|ou[^a-zA-Z0-9]|InOut[^a-zA-Z0-9]|mod[^a-zA-Z0-9]|chaque[^a-zA-Z0-9]|dans[^a-zA-Z0-9]|décroissant[^a-zA-Z0-9]|jusque[^a-zA-Z0-9]|Pas[^a-zA-Z0-9]",
             "name": "keyword.letter"
         },
         "numbers": {
@@ -22,11 +21,11 @@
             "name": "constant.numeric.decimal"
         },
         "types": {
-            "match": "entier|chaine|caractere|booleen|reel|tableau|[A-Z]+[a-z0-9]+[a-zA-Z0-9_]*",
+            "match": "entier|chaîne|caractère|booléen|réel|tableau|[A-ZÉÊÂÛÙÀÈÇÏÎ]+[a-z0-9éêâûùàèçïî]+[a-zA-Z0-9éêâûùàèçïîÏÎÉÊÂÛÙÀÈÇ_]*",
             "name": "entity.name.type.instance"
         },
         "arrow": {
-            "match": "←|◄-|<-|<=|=|<|>|>=|->|=>|-►|→|/|≠|et |ou |mod |non |\\+|-|/|%|\\*",
+            "match": "←|◄-|<-|<=|=|<|>|>=|->|=>|-►|→|/|≠|<>",
             "name": "support.function"
         },
         "double-quote": {
@@ -50,19 +49,19 @@
             "name": "comment.block"
         },
         "constant": {
-            "match": "[A-Z]+[A-Z_]*",
+            "match": "[A-ZÏÎÉÊÂÛÙÀÈÇ]+[A-ZÏÎÉÊÂÛÙÀÈÇ_]*",
             "name": "variable.other.contants"
         },
         "function": {
-            "match": "[a-zA-Z_]+\\(|\\(|\\)",
+            "match": "[a-zA-ZéêâûùàèçïîÏÎÉÊÂÛÙÀÈÇ_]+\\(",
             "name": "entity.name.function"
         },
         "furry": {
-            "match": "furry|furries|uwu|owo|awoo|roar",
+            "match": "furry|furries|uwu|owo|awoo",
             "name": "storage.type.function"
         },
         "blank": {
-            "match": "[a-zA-Z_]+[0-9]*[^\\(]",
+            "match": "[a-zA-ZéêâûùàèçïîÏÎÉÊÂÛÙÀÈÇ_]+[0-9]*[^\\(]",
             "name": "meta.brace.square"
         }
     }

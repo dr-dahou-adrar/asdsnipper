@@ -4,7 +4,7 @@ export function detectAlgoRange(): algo.Error {
     let script = algo.getScript();
     for (let i = 0; i < script.length; i++) {
         const line = script[i].trim();
-        if (line.trim().toLowerCase().startsWith("algorithme")) {
+        if (line.trim().toLowerCase().startsWith("Algorithme")) {
             let start = i, end = i;
             for (let j = i; j < script.length; j++) {
                 const subline = script[j].trim().split(" ");

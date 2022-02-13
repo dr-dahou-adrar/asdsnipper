@@ -1,123 +1,218 @@
 {
-    "Template de [pour]": {
-        "scope": "algo",
-        "prefix": "pour",
-        "body": [
-            "pour ${1:variable} de ${2:nombre} a ${3:nombre} faire",
-            "    $4",
-            "fpour"
-        ]
-    },
-    "Template de [pour/decroissant]": {
-        "scope": "algo",
-        "prefix": "pour decroissant",
-        "body": [
-            "pour ${1:variable} decroissant de ${2:nombre} a ${3:nombre} faire",
-            "    $4",
-            "fpour"
-        ]
-    },
-    "Template de [pour chaque]": {
-        "scope": "algo",
-        "prefix": "pour chaque",
-        "body": [
-            "pour chaque ${1:variable} dans ${2:ensemble} faire",
-            "    $3",
-            "fpour"
-        ]
-    },
-    "Template de [pour chaque/jusque]": {
-        "scope": "algo",
-        "prefix": "pour chaque jusque",
-        "body": [
-            "pour chaque ${1:variable} jusque ${2:condition} dans ${3:ensemble} faire",
-            "    $4",
-            "fpour"
-        ]
-    },
-    "Template de [tant que]": {
-        "scope": "algo",
-        "prefix": "tant que",
-        "body": [
-            "tant que ${1:condition} faire",
-            "    $2",
-            "ftant"
-        ]
-    },
-    "Template de [si]": {
-        "scope": "algo",
-        "prefix": "si",
-        "body": [
-            "si ${1:condition} alors",
-            "    $2",
-            "fsi"
-        ]
-    },
-    "Template de [si/sinon]": {
-        "scope": "algo",
-        "prefix": "si sinon",
-        "body": [
-            "si ${1:condition} alors",
-            "    $2",
-            "sinon",
-            "    $3",
-            "fsi"
-        ]
-    },
-    "Template de [sinon]": {
-        "scope": "algo",
-        "prefix": "sinon",
-        "body": [
-            "sinon",
-            "    $1"
-        ]
-    },
-    "Template de [fonction]": {
-        "scope": "algo",
-        "prefix": "fonction",
-        "body": [
-            "fonction ${1:nom}( ${2:arguments} )",
-            "debut",
-            "    $3",
-            "fin"
-        ]
-    },
-    "Template de [algorithme]": {
-        "scope": "algo",
-        "prefix": "algorithme",
-        "body": [
-            "algorithme",
-            "debut",
-            "    $1",
-            "fin"
-        ]
-    },
-    "Template de [retourne]": {
-        "scope": "algo",
-        "prefix": "retourne",
-        "body": [
-            "retourne ${1:valeur}"
-        ]
-    },
-    "Template de [fleche gauche]": {
-        "scope": "algo",
-        "prefix": "<=",
-        "body": [
-            "◄-"
-        ]
-    },
-    "Template de [fleche droite]": {
-        "scope": "algo",
-        "prefix": "=>",
-        "body": [
-            "-►"
-        ]
-    },
-    "Template de [different]": {
-        "scope": "algo",
-        "prefix": "=/=",
-        "body": [
-            "≠"
-        ]
-    }
+	"Template de [ecrire msg]": {
+		"scope": "algo",
+		"prefix": "ecrire msg",
+		"body": " Ecrire(\"${1:message}\");"
+	},
+	"Template de [ecrire variable]": {
+		"scope": "algo",
+		"prefix": "ecrire variable",
+		"body": " Ecrire(${1:variable});"
+		
+	},
+	"Template de [lire variable]": {
+		"scope": "algo",
+		"prefix": "lire variable",
+		"body": " Lire(${1:variable});"
+	},
+	"Template de [pour]": {
+		"scope": "algo",
+		"prefix": "pour",
+		"body": [
+			"Pour ${1:compteur} De: ${2:début} A: ${3:fin} Pas: ${4:valeur} Faire",
+			"\t${4:instructions;}",
+			"FinPour;"
+		]
+	},
+	"Template de [repéter]": {
+		"scope": "algo",
+		"prefix": "repéter",
+		"body": [
+			"Repéter",
+			"\t${1:instructions;}",
+			"Jusqu'a (${2:expression logique ou critère d'arrêt});"
+		],
+		"description":"boucle répéter"
+	},
+	"Template de [pour/décroissant]": {
+		"scope": "algo",
+		"prefix": "pour décroissant",
+		"body": [
+			"pour ${1:variable} décroissant de ${2:début} à ${3:fin} faire",
+			"\t${4:instructions;}",
+			"fpour"
+		]
+	},
+	"Template de [pour chaque]": {
+		"scope": "algo",
+		"prefix": "pour chaque",
+		"body": [
+			"pour chaque ${1:variable} dans ${2:ensemble} faire",
+			"\t${3:instructions;}",
+			"fpour"
+		]
+	},
+	"Template de [pour chaque/jusque]": {
+		"scope": "algo",
+		"prefix": "pour chaque jusque",
+		"body": [
+			"pour chaque ${1:variable} jusque ${2:condition} dans ${3:ensemble} faire",
+			"    ${4:instructions;}",
+			"fpour"
+		]
+	},
+	"Template de [tant que]": {
+		"scope": "algo",
+		"prefix": "tant-que",
+		"body": [
+			"Tant que (${1:condition}) Faire",
+			"\t${2:instructions;}",
+			"FinTantque"
+		],
+		"description":"boucle tant que"
+	},
+	"Template de [si]": {
+		"scope": "algo",
+		"prefix": "si-alors",
+		"body": [
+			"Si (${1:condition}) Alors",
+			"\t${2:instructions;}",
+			"FinSi;"
+		]
+	},
+	"Template de [si/sinon]": {
+		"scope": "algo",
+		"prefix": "si-sinon",
+		"body": [
+			"Si (${1:condition}) Alors",
+			"\t${2:instructions;}",
+			"Sinon",
+			"\t${3:instructions;}",
+			"FinSi;"
+		]
+	},
+	"Template de [fonction]": {
+		"scope": "algo",
+		"prefix": "fonction",
+		"body": [
+			"fonction ${1:nom}( ${2:arguments} )",
+			"début",
+			"\t${3:instructions;}",
+			"fin"
+		]
+	},
+	"Template de [variables block]": {
+		"scope": "algo",
+		"prefix": "variables block",
+		"body": [
+			"Variables",
+			"\t${1:var}: ${2|entier,chaîne,caractère,booléen,réel|};"
+		],
+		"description": "Ajouter une block de variables pour l'initialization"
+	},
+
+	"Template de [variable]": {
+		"scope": "algo",
+		"prefix": "variable",
+		"body": "${1:var}: ${2|entier,chaîne,caractère,booléen,réel|};",
+		"description": "Ajouter une seul variable"
+	},
+
+	"Template de [Tableau 1D]": {
+		"scope": "algo",
+		"prefix": "tab 1d",
+		"body": "${1:Nom}: Tableau [1..${3:fin}] de ${4|entier,chaîne,caractère,booléen,réel|};",
+		"description": "Crée un tableau de dimension 1 (vecteur)."
+	},
+
+	"Template de [Tableau 2D]": {
+		"scope": "algo",
+		"prefix": "tab 2d",
+		"body": "${1:Nom}: Tableau [1..${2:fin_ligne}, 1..${3:fin_colonne}] de ${4|entier,chaîne,caractère,booléen,réel|};",
+		"description": "Crée un tableau de dimension 2 (matrice)."
+	},
+
+	"Template de [constantes]": {
+		"scope": "algo",
+		"prefix": "constantes",
+		"body": [
+			"Constantes",
+			"\t${1:const} ◄- ${2:valeur};"
+		]
+	},
+	"Template de [algorithme]": {
+		"scope": "algo",
+		"prefix": "algorithme",
+		"body": [
+			"Algorithme ${1:nom};",
+			"",
+			"Début",
+			"\t${2:instructions;}",
+			"Fin."
+		]
+	},
+	"Template de [retourne]": {
+		"scope": "algo",
+		"prefix": "retourne",
+		"body": [
+			"retourne ${1:valeur}"
+		]
+	},
+	"Template de [fleche gauche]": {
+		"scope": "algo",
+		"prefix": "<=",
+		"body": [
+			"◄-"
+		]
+	},
+	"Template de [fleche droite]": {
+		"scope": "algo",
+		"prefix": "=>",
+		"body": [
+			"-►"
+		]
+	},
+	"Template de [différent]": {
+		"scope": "algo",
+		"prefix": "=/=",
+		"body": [
+			"≠"
+		]
+	},
+
+	"Template de [arrondi()]":{
+		"prefix":"arrondi",
+		"body":["arrondi(${1:un_réel});"],
+		"description":"fonction arrondi()"
+	},
+	"Template de [Long()]":{
+		"prefix":"long",
+		"body":["Long(${1:une_chaîne});"],
+		"description":"fonction long()"
+	},	
+	"Template de [Majus('a')='A']":{
+		"prefix":"majus",
+		"body":["Majus(${1:une_chaîne});"],
+		"description":"retourne le majuscule du caractère c"
+	},
+	"Template de [Asc('A')=65]":{
+		"prefix":"asc",
+		"body":["Asc(${1:une_chaîne});"],
+		"description":"retourne le code ASCII du caractère c"
+	},
+	"Template de [Car(65)='A']":{
+		"prefix":"car",
+		"body":["Car(${1:un_entier});"],
+		"description":"retourne le caractère dont le code ASCII est égal à i."
+	},
+	"Template de [Succ('a')='b']":{
+		"prefix":"succ",
+		"body":["Succ(${1:un_caractère});"],
+		"description":"retourne le successeur du caractère c"
+	},
+	"Template de [Pred('b')='a']":{
+		"prefix":"pred",
+		"body":["Pred(${1:un_caractère});"],
+		"description":"retourne le prédécesseur du caractère c"
+	}
 }

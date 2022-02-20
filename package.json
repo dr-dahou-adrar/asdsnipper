@@ -2,7 +2,7 @@
 	"name": "asdsnipper",
 	"displayName": "ASDsnipper",
 	"description": "Support des fichiers .algo pour le module * Algorithmique Structures de données *",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"icon": "images/logo.png",
 	"repository": {
 		"type": "git",

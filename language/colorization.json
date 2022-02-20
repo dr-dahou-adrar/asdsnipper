@@ -13,7 +13,7 @@
             ]
         },
         "keywords": {
-            "match": "Repéter[^a-zA-Z0-9]|Variables[^a-zA-Z0-9]|Jusqu'a[^a-zA-Z0-9]|Constantes[^a-zA-Z0-9]|Lire[^a-zA-Z0-9]|Ecrire[^a-zA-Z0-9]|fonction[^a-zA-Z0-9]|Algorithme[^a-zA-Z0-9]|Tant que[^a-zA-Z0-9]|FinPour[^a-zA-Z0-9]|Pour[^a-zA-Z0-9]|FinTantque[^a-zA-Z0-9]|Sinon[^a-zA-Z0-9]|Alors[^a-zA-Z0-9]|Si[^a-zA-Z0-9]|FinSi[^a-zA-Z0-9]|Début[^a-zA-Z0-9]|Fin.[^a-zA-Z0-9]|A[^a-zA-Z0-9]|Faire[^a-zA-Z0-9]|De[^a-zA-Z0-9]|retourne[^a-zA-Z0-9]|et[^a-zA-Z0-9]|non[^a-zA-Z0-9]|ou[^a-zA-Z0-9]|InOut[^a-zA-Z0-9]|mod[^a-zA-Z0-9]|chaque[^a-zA-Z0-9]|dans[^a-zA-Z0-9]|décroissant[^a-zA-Z0-9]|jusque[^a-zA-Z0-9]|Pas[^a-zA-Z0-9]",
+            "match": "Repéter[^a-zA-Z0-9]|Variables[^a-zA-Z0-9]|Jusqu'a[^a-zA-Z0-9]|Constantes[^a-zA-Z0-9]|Lire[^a-zA-Z0-9]|Ecrire[^a-zA-Z0-9]|Fonction[^a-zA-Z0-9]|Procédure[^a-zA-Z0-9]|Algorithme[^a-zA-Z0-9]|Tant que[^a-zA-Z0-9]|FinPour[^a-zA-Z0-9]|Pour[^a-zA-Z0-9]|FinTantque[^a-zA-Z0-9]|Sinon[^a-zA-Z0-9]|Alors[^a-zA-Z0-9]|Si[^a-zA-Z0-9]|FinSi[^a-zA-Z0-9]|Début[^a-zA-Z0-9]|Fin.[^a-zA-Z0-9]|A[^a-zA-Z0-9]|Faire[^a-zA-Z0-9]|De[^a-zA-Z0-9]|retourne[^a-zA-Z0-9]|et[^a-zA-Z0-9]|non[^a-zA-Z0-9]|ou[^a-zA-Z0-9]|InOut[^a-zA-Z0-9]|mod[^a-zA-Z0-9]|chaque[^a-zA-Z0-9]|dans[^a-zA-Z0-9]|décroissant[^a-zA-Z0-9]|jusque[^a-zA-Z0-9]|Pas[^a-zA-Z0-9]",
             "name": "keyword.letter"
         },
         "numbers": {

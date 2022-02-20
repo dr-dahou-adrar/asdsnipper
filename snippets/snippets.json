@@ -20,8 +20,8 @@
 		"prefix": "pour",
 		"body": [
 			"Pour ${1:compteur} De: ${2:début} A: ${3:fin} Pas: ${4:valeur} Faire",
-			"\t${4:instructions;}",
-			"FinPour;"
+			"\t${5:instructions;}",
+			"FinPour"
 		]
 	},
 	"Template de [repéter]": {
@@ -29,7 +29,7 @@
 		"prefix": "repéter",
 		"body": [
 			"Repéter",
-			"\t${1:instructions;}",
+			"\t${1:instructions};",
 			"Jusqu'a (${2:expression logique ou critère d'arrêt});"
 		],
 		"description":"boucle répéter"
@@ -39,7 +39,7 @@
 		"prefix": "pour décroissant",
 		"body": [
 			"pour ${1:variable} décroissant de ${2:début} à ${3:fin} faire",
-			"\t${4:instructions;}",
+			"\t${4:instructions};",
 			"fpour"
 		]
 	},
@@ -48,7 +48,7 @@
 		"prefix": "pour chaque",
 		"body": [
 			"pour chaque ${1:variable} dans ${2:ensemble} faire",
-			"\t${3:instructions;}",
+			"\t${3:instructions};",
 			"fpour"
 		]
 	},
@@ -66,7 +66,7 @@
 		"prefix": "tant-que",
 		"body": [
 			"Tant que (${1:condition}) Faire",
-			"\t${2:instructions;}",
+			"\t${2:instructions};",
 			"FinTantque"
 		],
 		"description":"boucle tant que"
@@ -76,8 +76,8 @@
 		"prefix": "si-alors",
 		"body": [
 			"Si (${1:condition}) Alors",
-			"\t${2:instructions;}",
-			"FinSi;"
+			"\t${2:instructions};",
+			"FinSi"
 		]
 	},
 	"Template de [si/sinon]": {
@@ -85,20 +85,10 @@
 		"prefix": "si-sinon",
 		"body": [
 			"Si (${1:condition}) Alors",
-			"\t${2:instructions;}",
+			"\t${2:instructions};",
 			"Sinon",
-			"\t${3:instructions;}",
-			"FinSi;"
-		]
-	},
-	"Template de [fonction]": {
-		"scope": "algo",
-		"prefix": "fonction",
-		"body": [
-			"fonction ${1:nom}( ${2:arguments} )",
-			"début",
-			"\t${3:instructions;}",
-			"fin"
+			"\t${3:instructions};",
+			"FinSi"
 		]
 	},
 	"Template de [variables block]": {
@@ -147,7 +137,7 @@
 			"Algorithme ${1:nom};",
 			"",
 			"Début",
-			"\t${2:instructions;}",
+			"\t${2:instructions};",
 			"Fin."
 		]
 	},
@@ -179,7 +169,28 @@
 			"≠"
 		]
 	},
-
+    "Template de [fonction]": {
+        "scope": "algo",
+        "prefix": "fonction",
+        "body": [
+            "Fonction ${1:nom}( ${2:arguments} ): ${3|entier,chaîne,caractère,booléen,réel|};",
+            "début",
+            "\t${4:instructions};",
+            "\tretourne ${5:valeur};",
+            "fin"
+        ]
+    },
+    "Template de [procédure]": {
+        "scope": "algo",
+        "prefix": "procédure",
+        "body": [
+            "Procédure ${1:nom}( ${2:arguments} );",
+            "début",
+            "\t${4:instructions};",
+            "fin"
+        ]
+    },
+	
 	"Template de [arrondi()]":{
 		"prefix":"arrondi",
 		"body":["arrondi(${1:un_réel});"],
@@ -214,5 +225,112 @@
 		"prefix":"pred",
 		"body":["Pred(${1:un_caractère});"],
 		"description":"retourne le prédécesseur du caractère c"
+	},
+	"tri à bulles (v.1)":{
+		"prefix": ["x-tri-bul-1"],
+		"body": ["procédure ${1:tri_à_bulles}(@${2:T}: ${3:tab_eleves}, ${4:N}:entier)",
+			"début",
+			"\trépéter",
+			"\t\tpos_dernière_permutation <-- 0",
+			"\t\tpour i de 1 à ${4:N}-1 faire",
+			"\t\t\tsi ${2:T}[i-1] ${5|>,<|} ${2:T}[i] alors",
+			"\t\t\t\t${6:kes} <-- ${2:T}[i-1]",
+			"\t\t\t\t${2:T}[i-1] <-- ${2:T}[i]",
+			"\t\t\t\t${2:T}[i] <-- ${6:kes}",
+			"\t\t\t\tpos_dernière_permutation <-- i",
+			"\t\t\tfin_si",
+			"\t\tfin_pour",
+			"\t\t${4:N} <-- pos_dernière_permutation",
+			"\tjusqu'à  pos_dernière_permutation ≤ 1",
+			"fin"],			
+		"description":"(proc) tri à bulles (v.1)"
+	},
+	"tri à bulles (v.2)":{
+		"prefix": ["x-tri-bul-2"],
+		"body": ["procédure ${1:tri_à_bulles}(@${2:T}: ${3:tab_eleves}, ${4:N}:entier)",
+			"début",
+			"\tpour i de ${4:N}-1 à 1 (pas = -1) faire",
+			"\t\tpour j de 1 à i faire",
+			"\t\t\tsi ${2:T}[j-1] > ${2:T}[j] alors",
+			"\t\t\t\t${5:kes} <-- ${2:T}[j-1]",
+			"\t\t\t\t${2:T}[j-1] <-- ${2:T}[j]",
+			"\t\t\t\t${2:T}[j] <-- ${5:kes}",
+			"\t\t\tfin_si",
+			"\t\tfin_pour",
+			"\tfin_pour",
+			"fin"],			
+		"description":"(proc) tri à bulles (v.2)"
+	},
+	"tri par sélection (v.1)":{
+		"prefix": ["x-tri-sél-1"],
+		"body": ["Procédure ${1:tri_par_sélection}(@${2:T}: ${3:tab_eleves}, ${4:N}:entier)",
+			"début",
+			"\tpour i de 0 à ${4:N}-2 faire",
+			"\t\t// recherche de la position du ${5|min,max|}imum",
+			"\t\tpos_${5|min,max|} <-- i",
+			"\t\tpour j de i+1 à ${4:N}-1 faire",
+			"\t\t\tsi ${2:T}[i] ${6|>,<|} ${2:T}[pos_${5|min,max|}] alors",
+			"\t\t\t\tpos_${5|min,max|} <-- i",
+			"\t\t\tfin_si ",
+			"\t\tfin_pour",
+			"\t\t",
+			"\t\t// permutation de la case actuelle (numéro i) avec ",
+			"\t\t// la case qui contient le ${5|min,max|}imum (numéro pos_${5|min,max|})",
+			"\t\tsi i ≠ pos_${5|min,max|} alors",
+			"\t\t\t ${7:kes} <-- ${2:T}[i]",
+			"\t\t\t${2:T}[i] <-- ${2:T}[pos_${5|min,max|}]",
+			"\t\t\t${2:T}[pos_${5|min,max|}] <--  ${7:kes}",
+			"\t\tfin_si",
+			"\tfin_pour",
+			"fin"],			
+		"description":"(proc) tri par sélection (v.1)"
+	},
+	"tri par sélection (v.2)":{
+		"prefix": ["x-tri-sél-2"],
+		"body": ["Procédure ${1:tri_par_sélection}(@${2:T}: ${3:tab_eleves}, ${4:N}:entier)",
+			"début",
+			"\tpour i de 0 à ${4:N}-2 faire",
+			"\t\tpos_${5|min,max|} <-- chercher_pos_${5|min,max|}(${2:T}, i, ${4:N}-1)",
+			"\t\tpermuter(${2:T}[i], ${2:T}[pos_${5|min,max|}])",
+			"\tfin_pour\t\t",
+			"fin",
+			"Fonction chercher_pos_${5|min,max|}(${2:T}: ${3:tab_eleves}, b_ini, b_fin: entier) : entier",
+			"début",
+			"\tp_${5|min,max|} <-- b_ini",
+			"\tpour i de b_ini + 1 à b_fin faire",
+			"\t\tsi ${2:T}[i] ${6|<,>|} ${2:T}[p_${5|min,max|}] alors",
+			"\t\t\tp_${5|min,max|} <-- i",
+			"\t\tfin_si",
+			"\tfin_pour",
+			"\tretourner p_${5|min,max|}",
+			"fin",
+			"Procédure permuter(@x: ${8|entier,chaîne,réel  ,booléen,caractère|}, @y:${8|entier,chaîne,réel  ,booléen,caractère|})",
+			"début",
+			"\tkes <-- x",
+			"\tx <-- y",
+			"\ty <-- kes",
+			"fin"],			
+		"description":"(proc) tri par sélection (v.2)"
+	},
+	"tri par insertion (v.1)":{
+		"prefix": ["x-tri-ins-1"],
+		"body": ["Procédure ${1:tri_par_insertion}(@${2:T}: ${3:tab_eleves}, ${4:N}:entier)",
+			"début",
+			"\tpour i de 1 à ${4:N}-1 faire",
+			"\t\t// sauvegarder la valeur à insérer",
+			"\t\t${5:valeur_à_insérer} <-- ${2:T}[i]",
+			"\t\t${6:pos_case_libre} <-- i",
+			"\t\t",
+			"\t\t// décalage à droite des valeurs, et recherche de la position d'insertion",
+			"\t\ttant que ${6:pos_case_libre} > 0 et ${2:T}[${6:pos_case_libre} - 1] ${7|>,<|} ${5:valeur_à_insérer} faire",
+			"\t\t\t${2:T}[${6:pos_case_libre}] <-- ${2:T}[${6:pos_case_libre} - 1]",
+			"\t\t\t${6:pos_case_libre} <-- ${6:pos_case_libre} - 1",
+			"\t\tfin_tant_que",
+			"\t\t",
+			"\t\t// insertion de \"${5:valeur_à_insérer}\" à la case libre",
+			"\t\t${2:T}[${6:pos_case_libre}] <-- ${5:valeur_à_insérer}",
+			"\tfin_pour",
+			"fin"],			
+		"description":"(proc) tri par insertion (v.1)"
 	}
 }

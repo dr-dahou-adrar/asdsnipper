@@ -5,7 +5,7 @@ export function saveScriptFunctions(): algo.Error {
     for (let i = 0; i < script.length; i++) {
         const line = script[i].trim();
 
-        if (line.trim().toLowerCase().startsWith("fonction")) { // function declaration
+        if (line.trim().toLowerCase().startsWith("Fonction")) { // function declaration
             let parts = line.split(/(\(|\))/); // split the name, the arguments, and the return type
             for (let j = 0; j < parts.length; j++) {
                 if (parts[j] == "(" || parts[j] == ")") {
